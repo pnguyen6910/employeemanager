@@ -74,9 +74,9 @@ function addDepartment() {
 function addRole() {
     inquirer
         .prompt({
-            name: "role",
+            name: "department",
             type: "input",
-            message: "Enter the role you want to add."
+            message: "Enter the department you want to add."
         }).then(function(answer) {
             connection.query('', function(err, res) {
         
@@ -105,16 +105,9 @@ function addEmployee() {
 }
 
 function addDepartment() {
-    inquirer
-        .prompt({
-            name: "department",
-            type: "input",
-            message: "Enter the department you want to add."
-        }).then(function(answer) {
-            connection.query('', function(err, res) {
+    connection.query('', function(err, res) {
         
-            })
-        })
+    })
 }
 
 function viewDepartments () {
