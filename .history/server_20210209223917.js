@@ -84,21 +84,18 @@ function addDepartment() {
 
 function viewDepartments () {
     connection.query('', function(err, res) {
-        if (err) throw err
         console.table(res)
     })
 }
 
 function viewRoles() {
     connection.query('SELECT `role`.`title` FROM `emloyees`.`role`', function(err, res) {
-        if (err) throw err
         console.table(res)
     })
 }
 
 function viewEmployees() {
     connection.query('', function(err, res) {
-        if (err) throw err
         console.table(res)
     })
 }

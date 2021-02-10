@@ -11,7 +11,7 @@ const inquirer = require("inquirer")
 
 function runManager() {
     inquirer
-        .prompt({
+      .prompt({
         name: "action",
         type: "list",
         message: "What would you like to do?",
@@ -57,50 +57,3 @@ function runManager() {
         }
         });
   }
-
-function addDepartment() {
-    connection.query('', function(err, res) {
-
-    })
-}
-
-function addRole() {
-    connection.query('', function(err, res) {
-        
-    })
-}
-
-function addEmployee() {
-    connection.query('', function(err, res) {
-        
-    })
-}
-
-function addDepartment() {
-    connection.query('', function(err, res) {
-        
-    })
-}
-
-function viewDepartments () {
-    connection.query('', function(err, res) {
-        if (err) throw err
-        console.table(res)
-    })
-}
-
-function viewRoles() {
-    connection.query('SELECT `role`.`title` FROM `emloyees`.`role`', function(err, res) {
-        if (err) throw err
-        console.table(res)
-    })
-}
-
-function viewEmployees() {
-    connection.query('', function(err, res) {
-        if (err) throw err
-        console.table(res)
-    })
-}
-
-runManager()

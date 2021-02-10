@@ -58,47 +58,44 @@ function runManager() {
         });
   }
 
-function addDepartment() {
+addDepartment => {
     connection.query('', function(err, res) {
 
     })
 }
 
-function addRole() {
-    connection.query('', function(err, res) {
-        
-    })
-}
-
-function addEmployee() {
+addRole => {
     connection.query('', function(err, res) {
         
     })
 }
 
-function addDepartment() {
+addEmployee => {
     connection.query('', function(err, res) {
         
     })
 }
 
-function viewDepartments () {
+addDepartment => {
     connection.query('', function(err, res) {
-        if (err) throw err
-        console.table(res)
+        
     })
 }
 
-function viewRoles() {
+viewRoles => {
     connection.query('SELECT `role`.`title` FROM `emloyees`.`role`', function(err, res) {
-        if (err) throw err
         console.table(res)
     })
 }
 
-function viewEmployees() {
+viewDepartments => {
     connection.query('', function(err, res) {
-        if (err) throw err
+        console.table(res)
+    })
+}
+
+viewEmployees => {
+    connection.query('', function(err, res) {
         console.table(res)
     })
 }
