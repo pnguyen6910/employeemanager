@@ -85,7 +85,7 @@ function addRole() {
             message: "How much is the salary?"
             }
     ]).then(function(answer) {
-            connection.query('INSERT INTO `employees`.`role` (`title`,`salary`) VALUES (<{title: }>, <{salary: }>);', function(err, res) {
+            connection.query('', function(err, res) {
         
             })
         })
@@ -118,7 +118,7 @@ function addDepartment() {
             type: "input",
             message: "Enter the department you want to add."
         }).then(function(answer) {
-            connection.query('INSERT INTO `employees`.`department` (`name`) VALUES (<{name: }>);', function(err, res) {
+            connection.query('', function(err, res) {
         
             })
         })
