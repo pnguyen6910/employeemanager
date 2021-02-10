@@ -66,7 +66,7 @@ function addDepartment() {
             message: "Enter the department you want to add."
         }).then(function(answer) {
             connection.query('', function(err, res) {
-                runManager()
+        
             })
         })
 }
@@ -86,7 +86,7 @@ function addRole() {
             }
     ]).then(function(answer) {
             connection.query('INSERT INTO `employees`.`role` (`title`,`salary`) VALUES (<{title: }>, <{salary: }>);', function(err, res) {
-                runManager()
+        
             })
         })
 }
@@ -107,7 +107,6 @@ function addEmployee() {
         ]).then(function(answer) {
             connection.query('INSERT INTO `employees`.`employee` (`first_name`, `last_name`) VALUES (<{first_name: }>, <{last_name: }>);', function(err, res) {
                 if (err) throw err
-                runManager()
             })
         })
 }
@@ -121,7 +120,6 @@ function addDepartment() {
         }).then(function(answer) {
             connection.query('INSERT INTO `employees`.`department` (`name`) VALUES ?', {name: answer.department}, function(err, res) {
                 if (err) throw err
-                runManager()
             })
         })
 }
@@ -130,7 +128,6 @@ function viewDepartments () {
     connection.query('SELECT `department`.`name` FROM `employees`.`department`;', function(err, res) {
         if (err) throw err
         console.table(res)
-        runManager()
     })
 }
 
@@ -138,7 +135,6 @@ function viewRoles() {
     connection.query("SELECT `role`.`title` FROM `employees`.`role`", function(err, res) {
         if (err) throw err
         console.table(res)
-        runManager()
     })
 }
 
@@ -146,7 +142,6 @@ function viewEmployees() {
     connection.query('SELECT `employee`.`first_name`, `employee`.`last_name` FROM `employees`.`employee`;', function(err, res) {
         if (err) throw err
         console.table(res)
-        runManager()
     })
 }
 
